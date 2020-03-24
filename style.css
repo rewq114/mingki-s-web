@@ -1,69 +1,89 @@
-#grid1{
-  display:grid;
-  grid-template-columns:250px 1fr;
+
+* {
+  box-sizing: border-box;
 }
-#grid1 #article1{
-  padding-left: 20px;
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
 }
-#letter{
+
+/* Header/logo Title */
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #1abc9c;
   color: white;
+}
+
+hd {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+  justify-content: center;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
   text-decoration: none;
+  text-align: center;
 }
-.list1{
-  font-size:25px;
-  border-right: 5px lightgray solid;
-  width:200px;
-  margin: 0px;
-  padding-left: 40px;
-  padding-top: 20px;
-}
-.list2{
-  font-size:20px;
-}
-.head{
-  text-decoration: none;
-  color: darkblue;
-  font-size: 100px;
-}
-.under{
-  text-decoration: none;
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
   color: black;
 }
-body{
-  margin:0px;
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width:980px;
 }
-h1{
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
   text-align: center;
-  border-bottom: 5px lightgray solid;
-  margin:0px;
-  padding:20px;
+  background: #ddd;
 }
 
-
-@media(max-width:800px){
-  #grid1{
-    display:block;
-  }
-  #grid1 #article1{
-    padding-left: 20px;
-  }
-  .list1{
-    font-size:25px;
-    border-right: none;
-    width:200px;
-    margin: 0px;
-    padding-left: 40px;
-    padding-top: 20px;
-  }
-  .list2{
-    font-size:20px;
-  }
-  h1{
-    text-align: center;
-    color: darkblue;
-    font-size: 50px;
-    border-bottom: none;
-    margin:0px;
-    padding:20px;
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 980px) {
+  .row, .navbar {
+    flex-direction: column;
   }
 }
