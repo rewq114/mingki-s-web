@@ -93,5 +93,6 @@ hd {
   }
   .navbar {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
